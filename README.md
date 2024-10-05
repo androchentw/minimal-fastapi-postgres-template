@@ -29,7 +29,6 @@ _Check out online example: https://minimal-fastapi-postgres-template.rafsaf.pl, 
     - [Docs URL, CORS and Allowed Hosts](#docs-url-cors-and-allowed-hosts)
   - [License](#license)
 
-
 ## Features
 
 - [x] Template repository
@@ -43,11 +42,7 @@ _Check out online example: https://minimal-fastapi-postgres-template.rafsaf.pl, 
 
 <br>
 
-
-
 <kbd>![template-fastapi-minimal-openapi-example](https://drive.google.com/uc?export=view&id=1rIXFJK8VyVrV7v4qgtPFryDd5FQrb4gr)</kbd>
-
-
 
 ## Quickstart
 
@@ -59,9 +54,11 @@ See [docs](https://docs.github.com/en/repositories/creating-and-managing-reposit
 
 ```bash
 cd your_project_name
+vi .env
 
 ### Poetry install (python3.12)
 poetry install
+poetry shell
 ```
 
 Note, be sure to use `python3.12` with this template with either poetry or standard venv & pip, if you need to stick to some earlier python version, you should adapt it yourself (remove new versions specific syntax for example `str | int` for python < 3.10)
@@ -125,7 +122,7 @@ This project is heavily based on the official template https://github.com/tiango
 
 The template was adpoted to my current style and knowledge, the test based expanded to cover more, added mypy, ruff and test setup was completly rewritten to have three things:
 
-- run test in paraller in many processes for speed 
+- run test in paraller in many processes for speed
 - transactions rollback after every test
 - create test databases instead of having another in docker-compose.yml
 
@@ -403,7 +400,6 @@ There are some **opinionated** default settings in `/app/main.py` for documentat
    ```
 
    Prevents HTTP Host Headers attack, you shoud put here you server IP or (preferably) full domain under it's accessible like `example.com`. By default in .env there are two most popular records: `ALLOWED_HOSTS=["localhost", "127.0.0.1"]`
-
 
 ## License
 
